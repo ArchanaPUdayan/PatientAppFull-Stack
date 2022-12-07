@@ -3,26 +3,25 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <h1>Add Patient</h1></div>
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Patient Name</label>
-                    <input type="text" class="form-control">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form label">name</label>
+                    <input name="name"[(ngModel)]="name"type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <textarea name="" id="" cols="30" rows="5" class="form-control">Address</textarea>
+                    <label for="" class="form label">age</label>
+                    <input name="age"[(ngModel)]="age"type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form label">Address</label>
+                    <textarea name="address"[(ngModel)]="address" name="" id="" cols="30" rows="5" class="form-control"></textarea>
                     
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">place</label>
-                    <input type="text" class="form-control">
+                    <label for="" class="form label">place</label>
+                    <input name="place"[(ngModel)]="place" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Age</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn btn-success">Submit</button>
+                    <button (click)="readValues()"class="btn btn-success">submit</button>
                 </div>
             </div>
         </div>
