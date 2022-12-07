@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-addpatient',
@@ -11,7 +12,7 @@ export class AddpatientComponent {
   address=""
   place=""
 
-
+  constructor(private api:ApiService){}
 readValues=()=>
 {
   let data:any={
@@ -20,13 +21,13 @@ readValues=()=>
     "address":this.address,
     "place":this.place
   }
-  console.log(data)
-  this.api.addPatient(data).subscribe(
-    (response:any)=>{
-      console.log(response)
-    }
-  )
-
+ console.log(data)
+ this.api.addPatient(data).subscribe(
+  (response:any)=>{
+    console.log(response)
+  }
+ )
+  
   
   }
   

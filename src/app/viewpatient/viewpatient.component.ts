@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-viewpatient',
@@ -6,24 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./viewpatient.component.css']
 })
 export class ViewpatientComponent {
-patient=[{
-  "name":"Nikhil"
-  ,"age":"19",
-  "address":"Kulamaavil",
-  "place":"Vyttila"
+  constructor(private api:ApiService){
+    this.api.fetchPatients().subscribe(
+      (response:any)=>{
+        this.patient=response;
+      }
+    )
+  }
+patient:any=[]
 
-},
-{
-  "name":"Archana","age":"19","address":"Perumbrayil","place":"Kumaranalloor"
-},
-{
-  "name":"Amitha","age":"20","address":"Kizhakkekalayil","place":"Kottayam"
-},
-{
-  "name":"Athira","age":"24","address":"Kuzhamavil","place":"Ernakulam"
-},
-{
-  "name":"Kumatham","age":"50","address":"Vettikkattuparambil","place":"Malappuram"
-}
-]
 }
