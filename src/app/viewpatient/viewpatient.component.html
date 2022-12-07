@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">dOB</th>
+                            <th scope="col">address</th>
+                            <th scope="col">place</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor=" let i of parts">
+                            <th>{{i.Id}}</th>
+                            <td>{{i.name}}</td>
+                            <td>{{i.dOB}}</td>
+                            <td>{{i.address}}</td>
+                            <td>{{i.place}}</td>
+                          </tr>
+                          <tr>
+                           
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
